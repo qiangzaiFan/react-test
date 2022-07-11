@@ -20,6 +20,6 @@ const virtualDOM = (
 
 const container = document.getElementById("root");
 
-TinyReact.render(virtualDOM, container);
+// TinyReact.render(virtualDOM, container);
 
-console.log(virtualDOM);
+// console.log(virtualDOM);

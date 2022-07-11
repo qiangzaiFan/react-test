@@ -1,4 +1,5 @@
 import mountElement from "./mountElement";
+import updateNodeElement from "./updateNodeElement";
 /**
  * 需要多次重复调用，从mountNativeElement 中抽取出来
  * @returns
@@ -12,6 +13,7 @@ export default function createDomElement(virtualDom) {
   } else {
     // 根据Virtual DOM type属性创建DOM元素
     newElement = document.createElement(virtualDom.type);
+    updateNodeElement(newElement, virtualDom);
   }
 
   // 递归渲染子节点
