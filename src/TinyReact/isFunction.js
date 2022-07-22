@@ -4,5 +4,5 @@
  * @returns
  */
 export default function isFunction(virtualDom) {
-  return virtualDom && typeof virtualDom === "function";
+  return virtualDom && typeof virtualDom.type === "function";
 }

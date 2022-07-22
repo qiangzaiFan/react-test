@@ -13,18 +13,7 @@
  * @return {object} Virtual DOM
  */
 export default function createElement(type, props, ...children) {
-  // const childElement = [].concat(...children).map(child=>{
-  //   // 判断 child 是否是对象类型
-  //   if(child instanceof Object){
-  //     // 如果是 什么都不需要做 直接返回即可
-  //     return child
-  //   }else{
-  //     // 如果不是对象就是文本 手动调用 createElement 方法将文本转换为 Virtual DOM
-  //     return createElement('text',{textContent:child})
-  //   }
-  // })
-
-  // boolean 和 null节点 bu不显示
+  // boolean 和 null节点 不显示
   const childElement = [].concat(...children).reduce((result, child) => {
     if (child != false && child != true && child != null) {
       // 判断 child 是否是对象类型

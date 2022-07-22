@@ -20,6 +20,5 @@ export default function createDomElement(virtualDom) {
   virtualDom.children.forEach((element) => {
     mountElement(element, newElement);
   });
-
   return newElement;
 }

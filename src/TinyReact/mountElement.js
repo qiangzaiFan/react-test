@@ -1,5 +1,6 @@
 import mountNativeElement from "./mountNativeElement";
 import mountComponent from "./mountComponent";
+import isFunction from "./isFunction";
 /**
  * 在进行 virtual DOM 转换之前还需要确定 Virtual DOM 的类 Component VS Native Element。
 类型不同需要做不同的处理 如果是 Native Element 直接转换。
