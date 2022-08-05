@@ -6,6 +6,10 @@ import diff from "./diff";
  * @param {*} container
  * @param {*} oldDom
  */
-export default function render(virtualDom, container, oldDom) {
+export default function render(
+  virtualDom,
+  container,
+  oldDom = container.firstChild
+) {
   diff(virtualDom, container, oldDom);
 }

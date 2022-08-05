@@ -16,6 +16,9 @@ export default function createDomElement(virtualDom) {
     updateNodeElement(newElement, virtualDom);
   }
 
+  // 创建元素的时候把virtualDom 保存一下，方便新旧比对
+  newElement._virtualDom = virtualDom;
+
   // 递归渲染子节点
   virtualDom.children.forEach((element) => {
     mountElement(element, newElement);
