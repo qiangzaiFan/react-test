@@ -1,5 +1,6 @@
 import mountElement from "./mountElement";
 import updateTextNode from "./updateTextNode";
+import updateNodeElement from "./updateNodeElement";
 
 export default function diff(virtualDom, container, oldDom) {
   const oldVirturalDom = oldDom && oldDom._virtualDom;
@@ -14,7 +15,8 @@ export default function diff(virtualDom, container, oldDom) {
       // 更新内容
       updateTextNode(virtualDom, oldVirturalDom, oldDom);
     } else {
-      // 更新元素
+      // 更新元素节点
+      updateNodeElement(oldDom, virtualDom, oldVirturalDom);
     }
 
     // 遍历 virtualDom 的子元素
